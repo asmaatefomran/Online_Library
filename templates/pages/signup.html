@@ -1,0 +1,71 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="{% static 'js/signup.js'%}?v=1.0" defer></script>
+    <title>Sign Up</title>
+</head>
+<body>
+   
+    
+    <form method="post" id="form">
+        {% csrf_token %}
+        <h1>Sign Up</h1>
+
+        <div class="input">
+            <label for="ftname">First Name</label>
+            <input type="text" id="ftname" name="ftname" >
+            <div class="error"></div>
+        </div>
+
+        <div class="input">
+            <label for="ltname">Last Name</label>
+            <input type="text" id="ltname" name="ltname">
+            <div class="error"></div>
+        </div>
+
+        <div class="input">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <div class="error"></div>
+         </div>
+
+        <div class="input">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"required >
+            <div class="error"></div>
+         </div>
+        <div class="input">
+             <label for="password">Password</label>
+             <input type="password" id="password" name="password">
+             <div class="error"></div>
+         </div>
+
+        <div class="input">
+             <label for="cpassword">Confirm Password</label>
+             <input type="password" id="cpassword" name="cpassword">
+             <div class="error"></div>
+         </div>
+        <div class="choice">
+            <p><input type="radio" name="choice" value="option1"required> User  
+               <input type="radio" name="choice" value="option2"required> Admin<br></p>
+         </div>
+        
+
+        <button type="submit" >Sign Up</button>
+        <p> Do you have an account already ?  <a href= 'login'>login </a></p>
+    </form>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    
+</body>
+</html>

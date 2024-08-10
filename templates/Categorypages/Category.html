@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/project_a.css'%}?v=1.0">
+    <title>Category</title>
+</head>
+
+
+<body>
+
+    
+
+
+    <section class="prefer">
+        <div class="prefer_all">
+            <div class="prefer_text">
+                <h1>Chosse Your Best Category</h1>
+            
+            </div>
+    
+            <div class="prefer_cards">
+
+                {% for category in categories %}
+                <div class="prefer_card1">
+                    <a href="{% url 'category_details' category.category %}"><h2>{{ category.category }}</h2></a>
+                </div>
+            {% endfor %}
+            
+               
+               
+            </div>
+    
+    
+        </div>
+    </section>
+
+
+
+
+  
+<!-- <script src="{% static 'js/Category.js' %}?v=1.0"></script> -->
+
+    
+</body>
+</html>
+{% endblock content %}

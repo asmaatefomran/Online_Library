@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:wght@200;400;600;700&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap');
+.p-70 {padding: 70px 0;}
+
+img{
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+ 
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    z-index: 11111;
+    
+}
+
+header a.logo {
+    font-family: "Satisfy", cursive;
+    margin-left: 40px;
+    font-weight: 800;
+    font-size: 40px;
+    margin-top: 10px;
+    padding: 0 20px;
+    margin-right: 90px;
+    color: black;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+header nav ul {
+    margin-left: 220px;
+    font-size: 14px;
+    list-style: none;  /* Ensure no default bullets */
+    padding: 0;  /* Remove default padding */
+    
+    
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+}
+
+header nav ul li span i {
+    font-size: 15px;
+    margin-top: 2px;
+    color: black;
+}
+
+nav ul li a {
+    display: block;
+    font-family: "Jost", sans-serif;
+    padding: 15px;
+    color: black;
+  
+  
+}
+
+nav ul li a:hover {
+    border: 1px solid #F18E7D;
+    border-radius: 10px;
+}
+
+nav .drop li {
+    display: block;
+}
+
+#Name_AU {
+    font-weight: 800;
+}
+
+nav .drop {
+    position: absolute;
+    display: none;
+    background-color: white;
+    list-style: none;  /* Ensure no default bullets */
+    padding: 0;  /* Remove default padding */
+    margin: 0;  /* Remove default margin */
+    top: 100%;  /* Position below the parent list item */
+    left: 0;  /* Align to the left edge */
+   
+}
+
+nav ul li:hover ul.drop {
+    display: block;
+}
+
+
+

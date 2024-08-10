@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:wght@200;400;600;700&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap');
+
+body {
+    font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+   
+    text-align: left;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.profilePictureIcon {
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 76px;
+    height: 150px;
+    width: 150px;
+}
+
+ .container {
+   
+    padding-top: 10px;
+ 
+
+
+} 
+
+.Profile-form,
+.input-field,
+.under-form,
+.right {
+    
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.input-field {
+
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50%;
+    float: left;
+}
+
+.form-group {
+    margin-bottom: 3rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f18e7d;
+    background-color: rgb(255, 248, 231);
+    background-clip: padding-box;
+    border: 1px solid #f18e7d;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+button,
+input {
+    overflow: visible;
+
+}
+
+
+.form-group label {
+    font-size: 1rem;
+
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+
+.under-form {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 30px;
+}
+
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.file {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.file:hover {
+    cursor: pointer;
+
+}
+
+
+
+
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.btn-style-1 {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f18e7d;
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+
+
+
+.btn-style-1:hover {
+    background-color: #d74760;
+    color: #fff;
+}
+
+.profile-img {
+    text-align: left;
+}
+
+.profile-img img {
+    float: left;
+    margin-right: 20px;
+
+}
+
+.Profile-form {
+    float: right;
+    width: calc(100% - 170px);
+    padding-bottom: 3rem !important;
+
+}
+
+/*  */
+.main_contant {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.text_head {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 14px;
+
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border: none;
+}
+
+th {
+    background-color: #f18e7d;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(255, 248, 231);
+
+}
+
+table img {
+    max-width: 100px;
+    height: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    z-index: 11111;
+
+
+
+
+}
+
+header a.logo {
+    font-family: "Satisfy", cursive;
+    font-weight: 800;
+    font-size: 35px;
+    padding: 0 20px;
+    margin-right: 90px;
+    color: black;
+}
+
+
+nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+
+
+
+
+}
+
+li {
+    list-style: none;
+}
+
+header nav ul li {
+
+    position: relative;
+    float: left;
+
+
+}
+
+header nav ul li span i {
+    font-size: 15px;
+    margin-top: 2px;
+    color: black;
+}
+
+
+nav ul li a {
+    display: block;
+    font-family: "Jost", sans-serif;
+    padding: 15px;
+    color: black;
+
+
+}
+
+
+nav ul li a:hover {
+
+    border: 1px solid #F18E7D;
+    border-radius: 10px;
+}
+
+nav .drop li {
+    display: block;
+
+}
+
+#Name_AU {
+    font-weight: 800;
+}
+
+nav .drop {
+
+    position: absolute;
+
+    display: none;
+    background-color: white;
+
+}
+
+nav ul li:hover ul.drop {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+header nav div.now {
+    display: flex;
+    width: 300px;
+    height: 0px;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+header nav div div.search {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 2px;
+    border-radius: 2px;
+    margin-top: 50px;
+
+
+
+}
+
+header nav div div div.select {
+    background-color: #F18E7D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 4px;
+
+    cursor: pointer;
+    position: relative;
+}
+
+header nav div div div.select ul {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: white;
+    display: block;
+    color: #F18E7D;
+    width: 90%;
+    font-size: 15px;
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+
+}
+
+
+header nav div div div.select ul.open {
+    max-height: 300px;
+}
+
+header nav div div div.select ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+header nav div div div.select ul li:hover {
+    border: 1px solid #F18E7D;
+    border-radius: 2px;
+}
+
+header nav div div.search input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.select p {
+    font-size: 12px;
+
+}
+
+header nav div div div.select ul:hover {
+
+    display: initial;
+}
+
+
+
+.footer {
+    background-color: #121823;
+    color: white;
+
+
+}
+
+.footer .footer_all {
+    margin: auto;
+    text-align: center;
+    max-height: 1170px;
+    padding: 60px 0;
+}
+
+.footer .footer_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .footer_col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer .footer_col h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+
+.footer .footer_col ul li a {
+    font-size: 16px;
+    color: #F18E7D;
+    font-weight: 300;
+    display: block;
+    padding: 10px 0;
+}
+
+.footer .footer_col .footer_social_links i {
+    padding: 0 10px;
+    color: #F18E7D;
+}

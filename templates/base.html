@@ -1,0 +1,19 @@
+{% load static %}
+
+{% include 'parts/nav.html' %}
+{% include 'parts/nav.html' with  choices=request.session.choices   username=request.session.username%}
+
+
+{% block content %}
+
+{% endblock content %}
+
+{% include 'parts/footer.html' %}
+
+
+
+
+
+
+
+

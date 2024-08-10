@@ -1,0 +1,85 @@
+<!-- Book_details.html -->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.name }} Details</title>
+    <link rel="stylesheet" href="{% static 'css/Book_details.css'%}?v=0.1"> 
+    <!-- Link to static CSS file -->
+    <style>
+        body{
+            background-image: url('/static/image/slider-bg-stationary.png');
+        }
+       </style>
+</head>
+<body>
+    <section class="container">
+    <div class="book-details">
+        <p><span class="tag">Title</span> <h2 id="title">{{ book.name }}</h2></p>
+        <br>
+        <p><span class="tag">Author</span><p id="author">{{ book.author }}</p></p>
+    
+        <p><span class="tag">Category</span> <p id="genre">{{ book.category }}</p></p>
+        
+        <p><span class="tag">Description</span> <p id="description">{{book.description }}</p></p>
+        <br>
+        <a href="{% url 'borrow_book' id=book.id %}" class="button-container" id="borrow-link-{{ book.id }}" onclick="disableLink('{{ book.id }}')">Borrow</a>
+
+
+
+        <br><br>
+        <hr>
+
+        <strong>You might like:</strong>
+        <div class="prefer_cards2">
+        
+            {% for suggested_book in suggested_books %}
+            <div class="prefer_card12">
+                <p style="font-size: 12px;;">{{ suggested_book.category }}</p>
+                <a href="{% url 'Book_details' id=suggested_book.id  %}"><h4>{{ suggested_book.name }}</h4></a>
+                <p style="font-size: 12px;">{{suggested_book.author}}</p>
+            </div>
+        {% endfor %}
+        
+           
+           
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+
+<script>
+    function disableLink(bookId) {
+        // Find the link by its ID
+        var link = document.getElementById('borrow-link-' + bookId);
+        
+        // Check if the link is already disabled
+        if (link.getAttribute('data-clicked') === 'true') {
+            return false; // Prevent the default action
+        }
+
+        // Set the data-clicked attribute to true to mark it as clicked
+        link.setAttribute('data-clicked', 'true');
+        
+        // Optionally, you can also style the link to make it look disabled
+        link.style.pointerEvents = 'none';
+        link.style.opacity = '0.5';
+        
+        return true; // Allow the default action to proceed
+    }
+</script>
+
+
+
+
+{% endblock content %}
+
+

@@ -1,0 +1,11 @@
+{% load static %}
+
+{% include 'parts/nav.html' %}
+{% include 'parts/nav.html' with username=request.session.username %}
+
+{% block content %}
+
+{% endblock content %}
+
+
+

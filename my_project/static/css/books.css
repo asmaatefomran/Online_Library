@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:wght@200;400;600;700&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Jost:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo:wght@800&family=Satisfy&display=swap'); 
+
+
+body{
+   background-image: url(background.jpeg);
+    font-family: "Jost", sans-serif;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Jost", sans-serif;
+
+}
+
+li{
+   list-style: none;
+}
+a{
+   text-decoration: none;
+}
+
+
+
+
+header{
+    position: fixed;
+   
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+    background-color: #fff;
+   
+  
+ 
+    z-index: 11111;
+   
+  
+
+}
+
+header a.logo{
+   font-family: "Satisfy", cursive;
+   font-weight: 800;
+   font-size: 35px;
+   padding: 0 20px;
+   margin-right: 90px;
+   color: black;
+  
+}
+
+
+nav{
+   display: flex;
+   position: relative;
+   width: 100%;
+   justify-content: space-between;
+   text-align: center;
+   padding: 5px;
+   font-size: 12px;
+ 
+   
+
+   
+}
+
+header nav ul li{
+
+   position: relative;
+   float: left;
+  
+
+}
+header nav ul li span i{
+   font-size: 15px;
+   margin-top: 2px;
+   color: black;
+}
+
+
+nav ul li a{
+   display: block;
+   font-family: "Jost", sans-serif;
+   padding: 15px;
+   color: black;
+
+
+}
+
+
+nav ul li a:hover{
+   
+   border: 1px solid #F18E7D;
+   border-radius: 10px;
+}
+
+nav  .drop li{
+ display: block;
+  
+}
+#Name_AU{
+   font-weight: 800;
+}
+nav  .drop{
+  
+   position: absolute;
+  
+   display: none;
+   background-color: white;
+
+}
+nav ul li:hover ul.drop{
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+
+header nav div.now{
+   display: flex;
+   width: 300px;
+   height: 0px;
+   align-items: center;
+   justify-content: center;
+ 
+
+}
+
+header nav div div.search{
+   background-color: white;
+   width: 100%;
+   display: flex;
+   padding: 2px;
+   border-radius: 2px;
+   margin-top: 50px;
+  
+   
+   
+}
+header nav div div div.select{
+   background-color: #F18E7D;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   color: #fff;
+   width: 300px;
+   height: 30px;
+   padding: 10px;
+   border-radius: 4px;
+   
+   cursor: pointer;
+   position: relative;
+}
+header nav div div div.select ul{
+   position: absolute;
+   top: 120%;
+   left: 0;
+   background-color:white;
+   display: block;
+   color: #F18E7D;
+   width: 90%;
+   font-size: 15px;
+  overflow: hidden;
+  max-height: 0;
+   border-radius: 4px;
+   transition:  0.5s;
+  
+}
+
+
+header nav div div div.select ul.open{
+   max-height: 300px;
+}
+header nav div div div.select ul li{
+   padding: 10px 20px;
+   cursor: pointer;
+   font-size: 12px;
+}
+
+header nav div div div.select ul li:hover{
+   border: 1px solid #F18E7D;
+   border-radius: 2px;
+}
+
+header nav div div.search input{
+   height: 30px;
+   width: 100%;
+   border: none;
+   outline: none;
+   font-size: 12px;
+   padding: 10px;
+   background-color: #f9f9f9;
+}
+.select p{
+   font-size: 12px;
+
+}
+header nav div div div.select ul:hover{
+
+ display: initial;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+
+.container{
+    width: 100%;
+    padding: 100px 0;
+
+
+}
+.start{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} 
+.start .search{
+    display: flex;
+   
+    width: 600px;
+    border: 3px solid #f4cec7 ;
+    padding: 15px;
+    border-radius:30px;
+    
+}
+.start .search_input{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    width: 575px;
+    padding: 0 10px;
+    font-size: 20px;
+    
+}
+.start .iconsearch{
+   margin-right: 10px;
+   color: rgb(92, 92, 92);
+
+}
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+.container .box-container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+}
+.container .box-container .box{
+    width: 250px;
+    height: 200px;
+    background-color: #f5f4f4;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid #f5bcb2;
+    margin: 10px;
+   
+}
+
+
+
+
+ .bt{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #eb8c8c;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    color: #fff;
+
+}
+p{
+   font-size: 18px;
+}
+
+
+
+.footer{
+   background-color: #121823;
+   color: white;
+
+}
+.footer .footer_all{
+   margin: auto;
+   text-align: center;
+   max-height: 1170px;
+   padding: 60px 0;
+}
+.footer .footer_row{
+   display: flex;
+   flex-wrap: wrap;
+}
+.footer .footer_col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer .footer_col h4{
+   font-size: 18px;
+   margin-bottom: 30px;
+   font-weight: 500;
+}
+
+
+.footer .footer_col ul li a{
+   font-size: 16px;
+   color: #F18E7D;
+   font-weight: 300;
+   display: block;
+   padding: 10px 0;
+}
+
+.footer .footer_col .footer_social_links i{
+   padding: 0 10px;
+   color: #F18E7D;
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Jost", sans-serif;
+}

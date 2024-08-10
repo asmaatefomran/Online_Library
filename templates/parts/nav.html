@@ -1,0 +1,96 @@
+{% load static%}
+<link rel="stylesheet" href="{%static 'css/nav.css'%}?v=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css_files/project_a.css">
+    <title>Categories</title>
+</head>
+<header>
+    
+
+    <a  class="logo" href="{% url 'Home'%}">WISE</a>
+    <nav >
+    
+  
+       <ul>
+
+        <li>
+            <a href="{% url 'Home'%}">Home</a>
+        </li>
+        <li>
+            <a href="{% url 'bookList' %}">Store </a>
+           
+           
+    
+        </li>
+
+        {% if choices == 'option1' %}
+
+        <li>
+            <a id="change1" href="{% url 'category'%}">Category</a>
+        </li>
+    
+        <li>
+            <a id="change2" href="{% url 'BorrowedList' %}">BorrowedList</a>
+        </li>
+        <li>
+            <a id="change3" href="{% url 'Home' %}#go1">About</a>
+        </li>
+        <li>
+            <a id="change4" href="{% url 'Home' %}#go2">Contact</a>
+        </li>
+    {% else %}
+        <li>
+            <a id="change6" href="{% url 'AddBook' %}">Add Book</a>
+        
+        </li>
+        <li>
+            <a id="change3" href="{% url 'Home' %}#go1">About</a>
+        </li>
+        <li>
+            <a id="change4" href="{% url 'Home' %}#go2">Contact</a>
+        </li>
+        
+    {% endif %}
+    
+         
+       
+
+        <li>
+          
+            <a href="#" class="ok"><span id="Name_AU">{{ username }}</span></a>
+           
+           <ul class="drop">
+            <li ><a id="dashboard" href="{%url 'p'%}">Profile</a></li>
+            <li><a href="{%url 'login'%}">Logout</a></li>
+            
+           
+           </ul>
+            
+               
+        </li>
+
+
+       
+
+       
+       </ul>
+
+
+
+      
+
+     
+
+    
+
+    </nav>
+
+    <p class="clear"></p>
+</header>
+<!-- <script src="{% static 'js/nav.js' %}?v=0.1"></script> -->
+

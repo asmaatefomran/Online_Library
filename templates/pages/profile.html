@@ -1,0 +1,130 @@
+
+{% extends 'base_admin.html' %}
+
+
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta.charset="UTF-8" />
+    <title>profile page</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}?v=0.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   <style>
+    body{
+        background-image: url(/static/image/background.jpeg);
+    }
+   </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+    <div class="container  ">
+        <!-- <div class="profile-img right  ">
+            <img width="150" alt="" class="profilePictureIcon"
+            src="{{ user.profile_picture.url }}><br>
+            <div class="file">
+                Change Photo
+                <input id="f" type="file" name="file" onchange="previewImage(event)" /> -->
+
+        <!-- </div> -->
+    </div>
+  
+    <div class="Profile-form">
+        <form class="row" method="POST">
+            {% csrf_token %}
+            <div class="input-field">
+                <div class="form-group">
+                    <label for="account-UserName">User name</label>
+                    <input type="text" name="username"  class="form-control" type="text" id="account-UserName" name="username" 
+                           value="{{ username }}">
+                </div>
+            </div>
+            
+            <!-- <div class="input-field">
+                <div class="form-group">
+                    <label for="account-fn">First Name</label>
+                    <input class="form-control" type="text" id="account-fn" name="ftname" required
+                           value="{{ fname }}">
+                </div>
+            </div>
+            <div class="input-field">
+                <div class="form-group">
+                    <label for="account-ln">Last Name</label>
+                    <input class="form-control" type="text" id="account-ln" name="ltname" required
+                           value="{{ lname }}">
+                </div>
+            </div>
+            <div class="input-field">
+                <div class="form-group">
+                    <label for="account-email">E-mail Address</label>
+                    <input class="form-control" type="email" id="account-email" name="email" required
+                           value="{{ email }}">
+                </div>
+            </div> -->
+            <div class="input-field">
+                <div class="form-group">
+                    <label for="account-pass">New Password</label>
+                    <input class="form-control" type="password" id="account-pass" name="password"
+                           placeholder="Write A Complex Password from 8 Letters">
+                </div>
+            </div>
+            <div class="input-field">
+                <div class="form-group">
+                    <label for="account-confirm-pass">Confirm Password</label>
+                    <input class="form-control" type="password" id="account-confirm-pass" name="cpassword"
+                           placeholder="Repeat the password">
+                </div>
+            </div>
+            <div class="under-form">
+              <!-- Add ID to the Update Profile button -->
+        <div>
+            <button id="updateButton" class="btn btn-primary btn-style-1" type="submit">Update Profile</button>
+        </div>
+
+            </div>
+        </form>
+
+        <!-- Display alert messages -->
+{% for message in messages %}
+<div class="alert alert-info" role="alert">
+    {{ message }}
+</div>
+{% endfor %}
+    </div>
+    </div>
+    </div>
+ 
+
+
+   
+
+
+    <!-- <script src="{% static 'js/profile.js'%}" defer></script>  -->
+
+</body>
+
+
+
+
+</html>
+
+
+{% endblock content %}

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+
+
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ListBooks.css' %}">
+
+    <style>
+
+        body{
+            background-image: url('/static/image/slider-bg-stationary.png');
+        }
+        
+        .container .box-container .box{
+            background-color: #fff;
+
+        }
+        .container .box-container .box:hover{
+            box-shadow: 0px 5px 10px #F18E7D;
+
+        }
+        .bt:hover{
+            background-color: #a84646;
+
+        }
+       
+        #suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            border-top: none;
+            z-index: 1000;
+            background: #fff;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+        }
+        #suggestions li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        #suggestions li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #suggestions li a:hover {
+            background: #f0f0f0;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">All Books</h1>
+        <form method="GET">
+            <section class="start">
+                <div class="search" style="position: relative;">
+                    <input class="search_input" id="txt1" name="search_name" type="search" placeholder="Search" onkeyup="showHint(this.value)">
+                    <ul id="suggestions"></ul>
+                </div>
+            </section>
+        </form>
+        <div class="box-container">
+            {% for x in book %}
+                <div class="box">
+                    <h3>{{ x.name }}</h3>
+                    <p id="o_p">{{ x.author }}</p>
+                    <p id="t_p">{{ x.category }}</p>
+                    <a href="{% url 'Book_details' id=x.id %}" class="bt"> Read More</a>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+
+    <script>
+    function showHint(str) {
+        if (str.length == 0) {
+            document.getElementById("suggestions").innerHTML = "";
+            return;
+        }
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            const suggestions = JSON.parse(this.responseText);
+            let suggestionList = '';
+            for (let i = 0; i < suggestions.length; i++) {
+                suggestionList += '<li>' + suggestions[i] + '</li>';
+            }
+            document.getElementById("suggestions").innerHTML = suggestionList;
+        }
+        xhttp.open("GET", "{% url 'autocomplete' %}?q=" + str, true);
+        xhttp.send();
+    }
+    </script>
+</body>
+</html>
+
+
+{% endblock content %}

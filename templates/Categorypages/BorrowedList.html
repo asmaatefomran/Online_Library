@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<head>
+    <meta.charset="UTF-8" />
+    <title>Borrwed List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/Project_s.css' %}">
+
+
+</head>
+
+<body>
+
+<div class="main_contant">
+    <h2 class="text_head">Book Borrowing Information</h2>
+    <table border="1" id="borrowedTable">
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Borrowing Date</th>
+                <th>Duration of Borrowing</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrowed_book in borrowed_books %}
+        
+            <tr>
+                <td>{{ borrowed_book.book.name }}</td>
+                <td>{{ borrowed_book.borrowing_at }}</td>
+                <td>{{ borrowed_book.DURATION_DAYS }} days</td>
+                <td>{{ borrowed_book.return_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+{% endblock content %}

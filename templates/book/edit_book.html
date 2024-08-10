@@ -1,0 +1,86 @@
+{% load static %}
+
+<head>
+     <title>Edit the book</title>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="{% static 'css/add&list.css' %}?v=1.0">
+     <style>
+          body {
+               background-image: url(/static/image/background.jpeg);
+          }
+     </style>
+
+</head>
+
+<body>
+     
+
+
+<div class="add">
+
+     <div class="head">
+          <h1>Edit the book </h1>
+     </div>
+
+     <div class="inputs">
+          <form method="post" class="books" id="libraryForm">
+               {% csrf_token %}
+
+               <div><label for="id1" class="ff1">Book name:</label>
+                    <br>
+                    <input class="id1" type="text" id="id1" name="Book_Name" autofocus required value="{{ book.name }}">
+                    <h6>The book name must only consist of letters, at least 4 letters and no more than 30 letters</h6>
+               </div>
+               <br>
+
+               <!-- <div><label for="id1" class="ff1">ID of book:</label>
+                    <br>
+                    <input class="id1" type="text" id="id2" name="id" required>
+                    <h6>ID of book must be only numbers</h6>
+               </div>
+               <br> -->
+
+               <div><label for="id1" class="ff1">Author of book:</label>
+                    <br>
+                    <input class="id1" type="text" id="id3" name="Author" required value="{{ book.author }}">
+                    <h6>The Author must only consist of letters, at least 4 letters and no more than 20 letters</h6>
+
+               </div>
+               <br>
+
+               <div><label for="id4" class="ff4">Category: </label> <br>
+                    <input class="id1" type="text" list="id4" id="id6" name="Category" required
+                         value="{{ book.category }}">
+                    <datalist id="id4">
+                         <option value="Novels"></option>
+                         <option value="Comic "></option>
+                         <option value="Romantic "></option>
+                         <option value="Fictional "></option>
+                         <option value="Sport "></option>
+                         <option value="Cooking "></option>
+                         <option value="Finance "></option>
+                    </datalist>
+                    <h6>The Category must only consist of letters, at least 4 letters and no more than 20 letters</h6>
+
+               </div>
+               <br>
+
+               <div><label for="id5" class="ff5">The description of book: </label><br>
+                    <textarea class="id1" name="Description" id="id5" cols="50" rows="5" required>{{ book.description }}</textarea>
+                    <h6>The Description must only consist of letters, at least 10 letters and no more than 100 letters
+                    </h6>
+               </div>
+               <br>
+
+
+               <button class="butt" type="submit" name="submit" id="submit">Edit</button>
+               <br>
+
+          </form>
+
+     </div>
+</div>
+
+<script src="{% static 'js/add.js' %}?v=1.0"></script>
+
+</body>
